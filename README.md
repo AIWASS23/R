@@ -322,6 +322,7 @@ Ao executar a função, R automaticamente infere o número de linhas.
 
 * - [Booleanos](https://libguides.mit.edu/c.php?g=175963&p=1158594)
 * **operadores lógicos e instruções condicionais** - [Tutorial](https://www.datacamp.com/community/tutorials/conditionals-and-control-flow-in-r)
+* - [Operadores em R](https://r-coder.com/operators-r/#Assignment_operators_in_R)
 
 ## 📦 Pacotes em R disponíveis
 
@@ -339,7 +340,137 @@ Ao executar a função, R automaticamente infere o número de linhas.
 * - [R-Bloggers](https://www.r-bloggers.com/)
 * - [Learning](https://www.r-bloggers.com/2015/12/how-to-learn-r-2/#h.y5b98o9o2h1r)
 
+## 📡 Tibbles
 
+* - [Tibble](https://tibble.tidyverse.org/)
+* - [Tidyverse Cookbook](https://rstudio-education.github.io/tidyverse-cookbook/tidy.html)
+
+## 💾 O básico da importação de dados
+
+### A função data() 
+
+A instalação padrão de R vem com um número de conjuntos de dados pré-carregados com os quais você pode praticar. Essa é uma ótima maneira de desenvolver suas habilidades em R e aprender sobre importantes funções de análise de dados. Além disso, muitos tutoriais e recursos online usam esses conjuntos de dados de amostra para ensinar conceitos de codificação em R. 
+
+Você pode usar a função data() para carregar esses conjuntos de dados em R. Se você executar a função data sem um argumento, R vai exibir uma lista de todos os conjuntos de dados disponíveis. 
+
+data()
+
+Isso inclui uma série de conjuntos de dados pré-carregados do pacote datasets.
+
+Se você quiser carregar um conjunto de dados específico, é só colocar o nome dele no parêntesis da função data(). Por exemplo, vamos carregar o conjunto de dados mtcars, que contém informações sobre os carros que apareceram nas edições passadas da revista Motor Trend. 
+
+data(mtcars)
+
+Ao executá-la, R vai carregar o conjunto de dados. O conjunto de dados também vai aparecer no painel Ambiente (Environment) do seu RStudio. O painel Ambiente exibe os nomes dos objetos de dados, tais como estruturas de dados e variáveis, que você tem disponíveis no seu espaço de trabalho atual. 
+
+Agora que o conjunto de dados está carregado, você pode obter uma prévia dele no painel do console de R. É só digitar o nome dele...
+
+mtcars
+
+... e então pressionar ctrl (ou cmnd) e enter.
+
+Você também pode exibir o conjunto de dados clicando diretamente no nome do conjunto de dados no painel Ambiente. Portanto, se você clicar em mtcars no painel Ambiente, R vai executar automaticamente a função View() e exibir o conjunto de dados no visualizador de RStudio. 
+
+### O pacote readr
+
+Além de usar os conjuntos de dados embutidos em R, também é útil importar dados de outras fontes para praticar ou analisar. O pacote readr de R é uma ótima ferramenta para a leitura de dados retangulares. Os dados retangulares são dados que se encaixam perfeitamente dentro de um retângulo de linhas e colunas, com cada coluna se referindo a uma única variável e cada linha se referindo a uma única observação. 
+
+Aqui estão alguns exemplos de tipos de arquivos que armazenam dados retangulares:
+
+* .csv (valores separados por vírgula): um arquivo .csv é um arquivo de texto simples que contém uma lista de dados. Geralmente, esses arquivos usam vírgulas para separar (ou delimitar) dados, mas às vezes eles usam outros caracteres, como ponto e vírgula. 
+* .tsv (valores separados por tabulação): um arquivo .tsv armazena uma tabela de dados em que as colunas de dados são separadas por tabulações. Por exemplo, um conjunto de dados em tabela, ou planilha de dados. 
+* .fwf (arquivos com largura ajustada): um arquivo .fwf tem um formato específico que permite o salvamento de dados textuais de uma maneira organizada. 
+* .log: um arquivo .log é um arquivo gerado pelo computador que registra eventos dos sistemas operacionais e outros programas de software.
+A base de R possui funções para ler os arquivos, mas as funções equivalentes no readr são, tipicamente, muito mais rápidas. Elas também produzem tibbles, que são mais fáceis de usar e ler. 
+
+O pacote readr é parte do centro do tidyverse. Então, se você já instalou o tidyverse, você tem o que precisa para começar a trabalhar com o readr. Se você ainda não instalou o tidyverse, você pode fazer isso agora. 
+
+### Funções de readr
+
+A meta de readr é fornecer um meio rápido e amigável para ler dados retangulares. O readr dá suporte a várias funções read_. Cada função se refere a um formato de arquivo específico.
+
+* read_csv(): arquivos com valores separados por vírgula (.csv)
+* read_tsv(): arquivos com valores separados por tabulação
+* read_delim(): arquivos delimitados em forma geral
+* read_fwf(): arquivos com largura ajustada
+* read_table(): arquivos tabulares onde as colunas são separadas por um espaço em branco
+* read_log(): arquivos de log da web
+
+Essas funções todas possuem sintaxe similar, portanto uma vez que você aprenda como usar uma delas, você pode usar esse conhecimento nas outras. 
+
+Na maioria dos casos, essas funções vão funcionar automaticamente: você vai fornecer um caminho para um arquivo, executar a função, e vai obter um tibble que exibe os dados no arquivo. Por trás das câmeras, o readr analisa o arquivo como um todo e especifica como cada coluna pode ser convertida de um caractere de vetor para um tipo de dado mais apropriado. 
+
+#### Como ler um arquivo .csv com readr 
+
+O pacote readr vem com alguns arquivos de amostra de conjuntos de dados embutidos que você pode usar como exemplos de código. Para listar esses arquivos de amostra, você pode executar a função readr_example() sem argumentos. 
+
+readr_example()
+
+“challenge.csv”
+“epa78.txt”
+“example.log”      
+“fwf-sample.txt”   
+“massey-rating.txt” 
+“mtcars.csv”       
+“mtcars.csv.bz2”    
+“mtcars.csv.zip”
+
+O arquivo “mtcars.csv” se refere ao conjunto de dados mtcars que foi mencionado mais cedo. Vamos usar a função read_csv() para ler o arquivo “mtcars.csv”, como exemplo. No parêntesis, você vai fornecer o caminho para o arquivo. Nesse caso, é o “readr_example(“mtcars.csv”). 
+
+read_csv(readr_example(“mtcars.csv”))
+
+Quando você executar a função, R vai imprimir na tela uma especificação de coluna que fornece o nome e o tipo de cada coluna. 
+
+### O pacote readxl
+
+Para importar planilhas de dados para R, você pode usar o pacote readxl. Esse pacote facilita a transferência de dados de Excel para R. O readxl oferece suporte tanto para os arquivos dos antigos formatos .xls quanto para os formatos modernos baseados em xml e .xls. 
+
+O pacote readxl é parte do tidyverse, mas não é um pacote do núcleo de tidyverse, portanto você precisa baixar o readxl em R por meio da função library().  
+
+library(readxl)
+
+#### Como ler um arquivo .csv com readxl
+
+Do mesmo jeito que o pacote readr, readxl vem com alguns arquivos de amostra de conjuntos de dados embutidos que você pode usar para praticar. Você pode executar o código readxl_example() para ver a lista.  
+
+Você pode usar a função read_excel() para ler um arquivo de planilha da mesma forma que você usou a função read_csv() para ler um arquivo .csv. O código para ler o arquivo de exemplo “type-me.xlsx” inclui o caminho para o arquivo nos parênteses da função.  
+
+read_excel(readxl_example(“type-me.xlsx”))
+
+Você pode usar a função  excel_sheets() para listar os nomes de cada planilha individualmente. 
+
+excel_sheets(readxl_example(“type-me.xlsx”))
+
+Você também pode especificar uma planilha por nome ou número.  É só digitar “sheet =” seguido pelo nome ou número da planilha. Por exemplo, você pode usar a planilha chamada “numeric_coercion” da lista acima. 
+
+read_excel(readxl_example(“type-me.xlsx”), sheet =“numeric_coercion”)
+
+Quando você executa a função, R retorna um tibble da planilha. 
+
+* - [Importação de dados do livro R for Data Science](https://r4ds.had.co.nz/data-import.html)
+* - [Documentação do readxl](https://readxl.tidyverse.org/)
+* - [Pacotes de Datasets](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html)
+
+## Tidyr
+
+Quando organizar ou ordenar seus dados usando o R, você pode precisar converter dados amplos em dados longos ou longos para amplos. Lembre-se de que é assim que os dados em um formato amplo se parecem em uma planilha: Os dados amplos possuem observações ao longo de várias colunas. Cada coluna contém dados de uma condição diferente da variável. 
+
+### As funções pivot_longer e pivot_wider
+
+Existem razões convincentes para usar ambos os formatos. Mas como analista, é importante saber como ordenar seus dados quando precisar fazer isso. Em R, você pode ter um data frame em um formato amplo que possui diversas variáveis, e condições para cada variável. Isso pode dar uma sensação de estar um pouco bagunçado. É aí que entra a pivot_longer(). Como parte do pacote tidyr, você pode usar essa função R para alongar os dados em um data frame aumentando o número de linhas e diminuindo o número de colunas. De forma parecida, se você quer converter seus dados para ter mais colunas e menos linhas, você deverá usar a função pivot_wider().
+
+* - [Pivoting](https://tidyr.tidyverse.org/articles/pivot.html)
+* - [CleanItUp 5: R-Ladies Sydney: Amplo em Longo em Amplo em…PIVOT](https://rladiessydney.org/courses/ryouwithme/02-cleanitup-5/)
+* - [Como representar múltiplas variáveis](https://scc.ms.unimelb.edu.au/resources-list/simple-r-scripts-for-analysis/r-scripts)
+* - [Bias](https://www.rdocumentation.org/packages/SimDesign/versions/2.2/topics/bias)
+* **** - [Éticas de dados](https://datasciencebox.org/ethics.html)
+
+
+
+SEMANA 4
+* **** - []()
+* **** - []()
+* **** - []()
 * **** - []()
 * **** - []()
 * **** - []()
