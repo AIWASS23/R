@@ -165,7 +165,7 @@ Assim como os vetores, as listas podem ser nomeadas. Você pode nomear os elemen
 
 list('Chicago' = 1, 'New York' = 2, 'Los Angeles' = 3)
 
-*  [Vertore e Listas](https://r4ds.had.co.nz/vectors.html#vectors)
+*  [Vertores e Listas](https://r4ds.had.co.nz/vectors.html#vectors)
 
 ## Datas e Horas
 
@@ -333,7 +333,7 @@ Ao executar a função, R automaticamente infere o número de linhas.
 * **Leia R Package Primer, de Karl Broman** - [R Package Primer](https://kbroman.org/pkg_primer/)
 * **Tidyverse é uma coleção de pacotes de R desenvolvida especialmente para se trabalhar com dados.** - [Tidyverse](https://www.tidyverse.org/)
 * **A lista do Suporte do RStudio sobre pacotes úteis com instruções de instalação e descrições de funcionalidades.** - [Listas](https://support.rstudio.com/hc/en-us/articles/201057987-Quick-list-of-useful-R-packages)
-* ** Índice de pacotes do CRAN classificados por tarefa. ** - [CRAN Views](https://cran.r-project.org/web/views/)
+* **Índice de pacotes do CRAN classificados por tarefa.** - [CRAN Views](https://cran.r-project.org/web/views/)
 
 ## 🕹️ Tutoriais
 
