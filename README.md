@@ -165,7 +165,7 @@ Assim como os vetores, as listas podem ser nomeadas. Você pode nomear os elemen
 
 list('Chicago' = 1, 'New York' = 2, 'Los Angeles' = 3)
 
-* - [Vertore e Listas](https://r4ds.had.co.nz/vectors.html#vectors)
+*  [Vertore e Listas](https://r4ds.had.co.nz/vectors.html#vectors)
 
 ## Datas e Horas
 
@@ -326,10 +326,10 @@ Ao executar a função, R automaticamente infere o número de linhas.
 
 ## 📦 Pacotes em R disponíveis
 
-* - [BioCondutor](http://bioconductor.org/)
-* - [R-Force](https://r-forge.r-project.org/)
-* - [rOpenSci](https://ropensci.org/)
-* - [CRAN](https://cran.r-project.org/)
+*  [BioCondutor](http://bioconductor.org/)
+*  [R-Force](https://r-forge.r-project.org/)
+*  [rOpenSci](https://ropensci.org/)
+*  [CRAN](https://cran.r-project.org/)
 * **Leia R Package Primer, de Karl Broman** - [R Package Primer](https://kbroman.org/pkg_primer/)
 * **Tidyverse é uma coleção de pacotes de R desenvolvida especialmente para se trabalhar com dados.** - [Tidyverse](https://www.tidyverse.org/)
 * **A lista do Suporte do RStudio sobre pacotes úteis com instruções de instalação e descrições de funcionalidades.** - [Listas](https://support.rstudio.com/hc/en-us/articles/201057987-Quick-list-of-useful-R-packages)
@@ -337,13 +337,13 @@ Ao executar a função, R automaticamente infere o número de linhas.
 
 ## 🕹️ Tutoriais
 
-* - [R-Bloggers](https://www.r-bloggers.com/)
-* - [Learning](https://www.r-bloggers.com/2015/12/how-to-learn-r-2/#h.y5b98o9o2h1r)
+*  [R-Bloggers](https://www.r-bloggers.com/)
+*  [Learning](https://www.r-bloggers.com/2015/12/how-to-learn-r-2/#h.y5b98o9o2h1r)
 
 ## 📡 Tibbles
 
-* - [Tibble](https://tibble.tidyverse.org/)
-* - [Tidyverse Cookbook](https://rstudio-education.github.io/tidyverse-cookbook/tidy.html)
+*  [Tibble](https://tibble.tidyverse.org/)
+*  [Tidyverse Cookbook](https://rstudio-education.github.io/tidyverse-cookbook/tidy.html)
 
 ## 💾 O básico da importação de dados
 
@@ -447,9 +447,9 @@ read_excel(readxl_example(“type-me.xlsx”), sheet =“numeric_coercion”)
 
 Quando você executa a função, R retorna um tibble da planilha. 
 
-* - [Importação de dados do livro R for Data Science](https://r4ds.had.co.nz/data-import.html)
-* - [Documentação do readxl](https://readxl.tidyverse.org/)
-* - [Pacotes de Datasets](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html)
+*  [Importação de dados do livro R for Data Science](https://r4ds.had.co.nz/data-import.html)
+*  [Documentação do readxl](https://readxl.tidyverse.org/)
+*  [Pacotes de Datasets](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html)
 
 ## Tidyr
 
@@ -459,11 +459,11 @@ Quando organizar ou ordenar seus dados usando o R, você pode precisar converter
 
 Existem razões convincentes para usar ambos os formatos. Mas como analista, é importante saber como ordenar seus dados quando precisar fazer isso. Em R, você pode ter um data frame em um formato amplo que possui diversas variáveis, e condições para cada variável. Isso pode dar uma sensação de estar um pouco bagunçado. É aí que entra a pivot_longer(). Como parte do pacote tidyr, você pode usar essa função R para alongar os dados em um data frame aumentando o número de linhas e diminuindo o número de colunas. De forma parecida, se você quer converter seus dados para ter mais colunas e menos linhas, você deverá usar a função pivot_wider().
 
-* - [Pivoting](https://tidyr.tidyverse.org/articles/pivot.html)
-* - [CleanItUp 5: R-Ladies Sydney: Amplo em Longo em Amplo em…PIVOT](https://rladiessydney.org/courses/ryouwithme/02-cleanitup-5/)
-* - [Como representar múltiplas variáveis](https://scc.ms.unimelb.edu.au/resources-list/simple-r-scripts-for-analysis/r-scripts)
-* - [Bias](https://www.rdocumentation.org/packages/SimDesign/versions/2.2/topics/bias)
-* **** - [Éticas de dados](https://datasciencebox.org/ethics.html)
+*  [Pivoting](https://tidyr.tidyverse.org/articles/pivot.html)
+*  [CleanItUp 5: R-Ladies Sydney: Amplo em Longo em Amplo em…PIVOT](https://rladiessydney.org/courses/ryouwithme/02-cleanitup-5/)
+*  [Como representar múltiplas variáveis](https://scc.ms.unimelb.edu.au/resources-list/simple-r-scripts-for-analysis/r-scripts)
+*  [Bias](https://www.rdocumentation.org/packages/SimDesign/versions/2.2/topics/bias)
+*  [Éticas de dados](https://datasciencebox.org/ethics.html)
 
 
 
