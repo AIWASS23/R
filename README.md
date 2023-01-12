@@ -271,7 +271,7 @@ Na maioria dos casos, não é preciso criar manualmente um data frame, pois voc�
 #### Arquivos
 
 Como criar, copiar e excluir arquivos em R. 
-* - [Arquivos](https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/files)
+* [Arquivos](https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/files)
 
 Use a função dir.create para criar uma nova pasta, ou diretório, para guardar seus arquivos. Insira o nome da pasta entre os parênteses da função.
 
@@ -298,7 +298,7 @@ exclua arquivos de R com a função unlink(). Insira o nome do arquivo entre os 
 unlink (“some_.file.csv”)
 
 #### Recurso adicional
-* - [Data Wrangling](http://statseducation.com/Introduction-to-R/modules/getting%20data/data-wrangling/)
+* [Data Wrangling](http://statseducation.com/Introduction-to-R/modules/getting%20data/data-wrangling/)
 
 ### Matrizes 
 
@@ -320,9 +320,9 @@ Ao executar a função, R automaticamente infere o número de linhas.
 
 ## 🧩 Operações
 
-* - [Booleanos](https://libguides.mit.edu/c.php?g=175963&p=1158594)
+*  [Booleanos](https://libguides.mit.edu/c.php?g=175963&p=1158594)
 * **operadores lógicos e instruções condicionais** - [Tutorial](https://www.datacamp.com/community/tutorials/conditionals-and-control-flow-in-r)
-* - [Operadores em R](https://r-coder.com/operators-r/#Assignment_operators_in_R)
+*  [Operadores em R](https://r-coder.com/operators-r/#Assignment_operators_in_R)
 
 ## 📦 Pacotes em R disponíveis
 
